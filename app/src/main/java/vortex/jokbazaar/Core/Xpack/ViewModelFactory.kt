@@ -1,4 +1,4 @@
-package co.rosemovie.app.Core.Xpack
+package vortex.jokbazaar.Core.Xpack
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

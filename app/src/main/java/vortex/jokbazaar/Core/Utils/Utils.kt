@@ -1,4 +1,4 @@
-package co.rosemovie.app.Core.Utils
+package vortex.jokbazaar.Core.Utils
 
 import android.content.Context
 import android.content.res.Resources

@@ -1,8 +1,8 @@
-package co.rosemovie.app.Core.Xpack
+package vortex.jokbazaar.Core.Xpack
 
 import android.app.Service
 import android.content.Context
-import co.rosemovie.app.Core.Security.Offline.Reactor
+import vortex.jokbazaar.Core.Security.Offline.Reactor
 import dagger.android.AndroidInjection
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import javax.inject.Inject

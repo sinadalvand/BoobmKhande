@@ -1,4 +1,4 @@
-package co.rosemovie.app.Core.Xpack
+package vortex.jokbazaar.Core.Xpack
 
 import android.content.Context
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import co.rosemovie.app.Core.Security.Offline.Reactor
+import vortex.jokbazaar.Core.Security.Offline.Reactor
 import dagger.android.support.AndroidSupportInjection
 import timber.log.Timber
 import java.lang.reflect.ParameterizedType

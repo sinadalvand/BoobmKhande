@@ -1,10 +1,8 @@
-package co.rosemovie.app.Core.Xpack
+package vortex.jokbazaar.Core.Xpack
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import co.rosemovie.app.Core.Provider.Repository
-import co.rosemovie.app.Core.Security.Offline.Reactor
-import co.rosemovie.app.Protocol.MainApiInterface
+import vortex.jokbazaar.Core.Security.Offline.Reactor
 import io.reactivex.disposables.Disposable
 import javax.inject.Inject
 
@@ -15,11 +13,7 @@ abstract class XviewModel : ViewModel() {
     @Inject
     lateinit var reactor: Reactor
 
-    @Inject
-    lateinit var repository: Repository
 
-    @Inject
-    lateinit var api: MainApiInterface
 
     private var firstFetch = true
 

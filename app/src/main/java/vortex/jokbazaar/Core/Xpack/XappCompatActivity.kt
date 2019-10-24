@@ -1,11 +1,11 @@
-package co.rosemovie.app.Core.Xpack
+package vortex.jokbazaar.Core.Xpack
 
 import android.content.Context
 import android.os.Bundle
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
-import co.rosemovie.app.Core.Security.Offline.Reactor
+import vortex.jokbazaar.Core.Security.Offline.Reactor
 import dagger.android.AndroidInjection
 import dagger.android.DaggerActivity
 import timber.log.Timber

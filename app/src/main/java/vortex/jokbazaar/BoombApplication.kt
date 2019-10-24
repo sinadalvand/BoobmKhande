@@ -1,12 +1,14 @@
 package vortex.jokbazaar
 
-import android.app.Application
 import androidx.multidex.MultiDex
 import co.ronash.pushe.Pushe
+import dagger.android.AndroidInjector
+import dagger.android.support.DaggerApplication
 import timber.log.Timber
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
+import vortex.jokbazaar.Di.DaggerMainComponent
 
-class BoombApplication : Application() {
+class BoombApplication : DaggerApplication() {
 
     override fun onCreate() {
         super.onCreate()
@@ -28,4 +30,10 @@ class BoombApplication : Application() {
                 .build()
         )
     }
+
+
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        return DaggerMainComponent.factory().build(this)
+    }
+
 }

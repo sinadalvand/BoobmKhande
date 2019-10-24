@@ -1,8 +1,8 @@
-package co.rosemovie.app.Core.Security.Offline
+package vortex.jokbazaar.Core.Security.Offline
 
 import android.content.Context
-import co.rosemovie.app.BuildConfig
-import com.securepreferences.SecurePreferences
+import vortex.jokbazaar.BuildConfig
+
 
 class Reactor(context: Context, key: String) {
 

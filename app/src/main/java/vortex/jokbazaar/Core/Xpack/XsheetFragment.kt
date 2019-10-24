@@ -1,4 +1,4 @@
-package co.rosemovie.app.Core.Xpack
+package vortex.jokbazaar.Core.Xpack
 
 import android.app.Dialog
 import android.content.Context
@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.lifecycle.ViewModelProviders
-import co.rosemovie.app.Core.Security.Offline.Reactor
-import co.rosemovie.app.R
+import vortex.jokbazaar.Core.Security.Offline.Reactor
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import dagger.android.support.AndroidSupportInjection
+import vortex.jokbazaar.R
 import java.lang.reflect.ParameterizedType
 import javax.inject.Inject
 

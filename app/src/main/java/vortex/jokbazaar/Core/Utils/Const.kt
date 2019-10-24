@@ -1,4 +1,4 @@
-package co.rosemovie.app.Core.Utils
+package vortex.jokbazaar.Core.Utils
 
 object Const {
 
