@@ -1,7 +1,8 @@
-package vortex.jokbazaar
+package vortex.jokbazaar.View.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import vortex.jokbazaar.R
 
 class MainActivity : AppCompatActivity() {
 
