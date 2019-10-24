@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "862503735027",
+    "firebase_url": "https://boombkhande-4c5ef.firebaseio.com",
+    "project_id": "boombkhande-4c5ef",
+    "storage_bucket": "boombkhande-4c5ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862503735027:android:4fe17275ec2055fe64f186",
+        "android_client_info": {
+          "package_name": "vortex.jokbazaar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862503735027-8tgsf8moqi09fe06cfdie22ttkul3tdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_9GsulU6rPL_O45Hm2Grmf7SvmcK8DBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862503735027-8tgsf8moqi09fe06cfdie22ttkul3tdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
