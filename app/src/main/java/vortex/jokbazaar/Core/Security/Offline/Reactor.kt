@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Core.Security.Offline
+package vortex.jokbazaar.core.security.offline
 
 import android.content.Context
 import vortex.jokbazaar.BuildConfig

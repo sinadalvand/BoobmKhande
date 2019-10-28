@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Core.Xpack
+package vortex.jokbazaar.core.xpack
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

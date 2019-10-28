@@ -1,15 +1,14 @@
-package vortex.jokbazaar.Core.Xpack
+package vortex.jokbazaar.core.xpack
 
 import android.content.Context
 import android.os.Bundle
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
-import vortex.jokbazaar.Core.Security.Offline.Reactor
 import dagger.android.AndroidInjection
-import dagger.android.DaggerActivity
 import timber.log.Timber
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import vortex.jokbazaar.core.security.offline.Reactor
 import java.lang.reflect.ParameterizedType
 import javax.inject.Inject
 
@@ -19,8 +18,8 @@ abstract class XappCompatActivity<T : XviewModel>  : AppCompatActivity() {
     @Inject
     lateinit var vmFactory: ViewModelFactory
 
-//    @Inject
-//    lateinit var reactor: Reactor
+    @Inject
+    lateinit var reactor: Reactor
 
 
     lateinit var vm: T

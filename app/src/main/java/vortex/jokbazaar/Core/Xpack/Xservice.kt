@@ -1,8 +1,8 @@
-package vortex.jokbazaar.Core.Xpack
+package vortex.jokbazaar.core.xpack
 
 import android.app.Service
 import android.content.Context
-import vortex.jokbazaar.Core.Security.Offline.Reactor
+import vortex.jokbazaar.core.security.offline.Reactor
 import dagger.android.AndroidInjection
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import javax.inject.Inject

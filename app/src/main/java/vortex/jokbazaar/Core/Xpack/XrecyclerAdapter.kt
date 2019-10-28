@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Core.Xpack
+package vortex.jokbazaar.core.xpack
 
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView

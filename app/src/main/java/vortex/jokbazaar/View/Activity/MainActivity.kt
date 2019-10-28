@@ -1,10 +1,11 @@
-package vortex.jokbazaar.View.Activity
+package vortex.jokbazaar.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import vortex.jokbazaar.core.xpack.XappCompatActivity
 import vortex.jokbazaar.R
+import vortex.jokbazaar.viewModel.MainActivityViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : XappCompatActivity<MainActivityViewModel>(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

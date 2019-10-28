@@ -1,9 +1,9 @@
-package vortex.jokbazaar.Core.Xpack
+package vortex.jokbazaar.core.xpack
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import vortex.jokbazaar.Core.Security.Offline.Reactor
 import io.reactivex.disposables.Disposable
+import vortex.jokbazaar.core.security.offline.Reactor
 import javax.inject.Inject
 
 abstract class XviewModel : ViewModel() {

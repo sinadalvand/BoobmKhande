@@ -1,17 +1,12 @@
-package vortex.jokbazaar.Core.Utils
+package vortex.jokbazaar.core.utils
 
 import android.content.Context
 import android.content.res.Resources
 import android.content.res.Resources.NotFoundException
 import android.util.TypedValue
 import androidx.core.content.ContextCompat
-import android.graphics.Typeface.createFromAsset
-import android.R.id.custom
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Typeface
-import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import java.util.regex.Pattern

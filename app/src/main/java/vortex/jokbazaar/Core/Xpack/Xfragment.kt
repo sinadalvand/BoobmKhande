@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Core.Xpack
+package vortex.jokbazaar.core.xpack
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import vortex.jokbazaar.Core.Security.Offline.Reactor
 import dagger.android.support.AndroidSupportInjection
 import timber.log.Timber
+import vortex.jokbazaar.core.security.offline.Reactor
 import java.lang.reflect.ParameterizedType
 import javax.inject.Inject
 

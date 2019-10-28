@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Core.Utils
+package vortex.jokbazaar.core.utils
 
 import org.reactivestreams.Publisher
 import org.reactivestreams.Subscriber

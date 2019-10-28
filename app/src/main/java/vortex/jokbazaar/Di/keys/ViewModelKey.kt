@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Di.Keys
+package vortex.jokbazaar.di.Keys
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

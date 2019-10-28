@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Core.Utils
+package vortex.jokbazaar.core.utils
 
 import android.graphics.Typeface
 import android.view.View

@@ -6,7 +6,9 @@ import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 import timber.log.Timber
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
-import vortex.jokbazaar.Di.DaggerMainComponent
+import vortex.jokbazaar.di.DaggerMainComponent
+
+//import vortex.jokbazaar.Di.DaggerMainComponent
 
 class BoombApplication : DaggerApplication() {
 

@@ -1,4 +1,4 @@
-package vortex.jokbazaar.Protocol
+package vortex.jokbazaar.protocol
 
 interface apiMain {
 
