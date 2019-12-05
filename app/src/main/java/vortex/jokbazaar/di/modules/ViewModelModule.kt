@@ -7,6 +7,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 import vortex.jokbazaar.di.Keys.ViewModelKey
+import vortex.jokbazaar.viewModel.FavorFragmentViewModel
 import vortex.jokbazaar.viewModel.MainActivityViewModel
 import vortex.jokbazaar.viewModel.MainFragmentViewModel
 import javax.inject.Singleton
@@ -30,6 +31,12 @@ abstract class ViewModelModule {
     @ViewModelKey(MainFragmentViewModel::class)
     @Singleton
     internal abstract fun mainFragmentViewModel(mainFragmentViewModel: MainFragmentViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(FavorFragmentViewModel::class)
+    @Singleton
+    internal abstract fun favorFragmentViewModel(favorFragmentViewModel: FavorFragmentViewModel): ViewModel
 
 
 }

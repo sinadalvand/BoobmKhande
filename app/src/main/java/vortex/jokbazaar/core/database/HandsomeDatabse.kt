@@ -4,14 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import vortex.jokbazaar.BuildConfig
 import vortex.jokbazaar.model.Category
-import vortex.jokbazaar.model.Jok
+import vortex.jokbazaar.model.Post
 
-@Database(entities = [Jok::class, Category::class], version = 1)
+@Database(entities = [Post::class, Category::class], version = 1,exportSchema=false)
 abstract class HandsomeDatabse : RoomDatabase() {
 
-    abstract fun MainDAO(): HandsomeDAO
+    abstract fun getMainDAO(): HandsomeDAO
 
     companion object {
         @Volatile

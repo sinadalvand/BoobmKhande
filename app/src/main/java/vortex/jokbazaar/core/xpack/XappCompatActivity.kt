@@ -30,6 +30,7 @@ abstract class XappCompatActivity<T : XviewModel>  : AppCompatActivity() {
         AndroidInjection.inject(this)
         val passTime = System.currentTimeMillis()
         Timber.e("Time1: ${passTime-time}")
+
         super.onCreate(savedInstanceState)
 
         val time3 = System.currentTimeMillis()
@@ -67,6 +68,7 @@ abstract class XappCompatActivity<T : XviewModel>  : AppCompatActivity() {
     open fun getArgs() {
 
     }
+
 
 
 

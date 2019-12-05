@@ -18,12 +18,14 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "vortex.jokbazaar"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
         buildConfigField "String", "appName", '"BoombKhande"'
+        buildConfigField "String", "TAPSELL_NATIVE_BANNER", '"5de77a1c14f8b500011c52b3"'
         buildConfigField "Integer", "databseVersion", '1'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -69,8 +71,9 @@ dependencies {
 
 
     // Google Console
-    implementation 'com.google.firebase:firebase-core:17.2.0'
-    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.android.gms:play-services-safetynet:16.0.0'
+//    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 //    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
 
@@ -92,8 +95,9 @@ dependencies {
 
     // Room (Database Component)
     implementation "androidx.room:room-runtime:2.2.1"
-    annotationProcessor "androidx.room:room-compiler:2.2.1"
+    kapt "androidx.room:room-compiler:2.2.1"
     implementation "androidx.room:room-ktx:2.2.1"
+    implementation 'androidx.room:room-rxjava2:2.2.1'
 
 
     // Room Test helpers
@@ -115,10 +119,26 @@ dependencies {
 
 
     // pushe
-    implementation ('co.ronash.android:pushe-base:1.6.3'){
-        // use exclude if you using another firebase console directly
-        exclude group: 'com.google.firebase', module: 'firebase-messaging'
-    }
+    implementation 'co.ronash.android:pushe-base:1.6.3'
 
+
+    // coroutines for replacing with Thread
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"
+
+
+    // tapsell(AD)
+    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.3.7'
+
+
+    implementation project(":tinyToolbar")
+
+    //Pagination
+//    implementation "androidx.paging:paging-rxjava2:2.1.0"
+//    implementation "androidx.paging:paging-runtime:2.1.0" // For Kotlin use paging-runtime-ktx
+//    testImplementation "androidx.paging:paging-common:2.1.0" // For Kotlin use paging-common-ktx
+
+    // alternatively - without Android dependencies for testing
+
+    implementation 'com.czerwii:SlidingdrawerMenu:1.0.1'
 
 }

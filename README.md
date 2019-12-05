@@ -1,3 +1,0 @@
-# BoombKhandeh
-
-Vortex jokbazaar rebuild 

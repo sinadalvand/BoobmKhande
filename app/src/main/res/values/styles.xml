@@ -1,12 +1,38 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--Light Theme-->
+    <style name="Light" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="bk_background">@color/light_bg</item>
+        <item name="bk_toolbarSecond">@color/light_toolbarSec</item>
+        <item name="bk_textColor">@color/dark_bg</item>
+        <item name="bk_deactiveTextColor">@color/light_deactiveTextColor</item>
+        <item name="bk_shadow_image">@drawable/shape_shadow_light</item>
+        <item name="bk_shadow_menu">@drawable/shape_shadow_menu_light</item>
+        <item name="bk_secondBackground">@color/light_bg_second</item>
+        <item name="bk_text_hint">@drawable/shape_text_dark</item>
+        <item name="bk_text_hint_second">@drawable/shape_text_des_light</item>
+        <item name="bk_star_color">@color/colorAccent</item>
     </style>
+
+    <!--Dark Theme-->
+    <style name="Dark" parent="Light">
+        <!-- Customize your theme here. -->
+        <item name="bk_background">@color/dark_bg</item>
+        <item name="bk_toolbarSecond">@color/dark_toolbarSec</item>
+        <item name="bk_textColor">@color/light_bg</item>
+        <item name="bk_deactiveTextColor">@color/dark_deactiveTextColor</item>
+        <item name="bk_shadow_image">@drawable/shape_shadow_dark</item>
+        <item name="bk_shadow_menu">@drawable/shape_shadow_menu_dark</item>
+        <item name="bk_secondBackground">@color/dark_bg_second</item>
+        <item name="bk_text_hint">@drawable/shape_text_light</item>
+        <item name="bk_text_hint_second">@drawable/shape_text_des_dark</item>
+        <item name="bk_star_color">@color/light_bg</item>
+    </style>
+
 
     <style name="BottomSheetDialog"></style>
 

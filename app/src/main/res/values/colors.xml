@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+
+    <!--Share -->
+    <color name="colorPrimary">#ed412d</color>
+    <color name="colorPrimaryDark">#cd201f</color>
+    <color name="colorAccent">#ed412d</color>
+
+
+    <!--Light-->
+    <color name="light_bg">@android:color/white</color>
+    <color name="light_bg_second">#F5F5F5</color>
+    <color name="light_toolbarSec">#f8f8f8</color>
+    <color name="light_deactiveTextColor">#3E4761</color>
+
+
+    <!--Dark-->
+    <color name="dark_bg">#303A4D</color>
+    <color name="dark_bg_second">#2B3346</color>
+    <color name="dark_toolbarSec">#384259</color>
+    <color name="dark_deactiveTextColor">#D1CFCF</color>
+
 </resources>

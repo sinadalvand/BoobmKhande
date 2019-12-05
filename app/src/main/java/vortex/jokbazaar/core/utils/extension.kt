@@ -3,6 +3,7 @@ package vortex.jokbazaar.core.utils
 import android.graphics.Typeface
 import android.view.View
 import android.widget.TextView
+import androidx.recyclerview.widget.ItemTouchHelper
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -28,3 +29,4 @@ fun String.md5(): String {
     val md = MessageDigest.getInstance("MD5")
     return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
 }
+

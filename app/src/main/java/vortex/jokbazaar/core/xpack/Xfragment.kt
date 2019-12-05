@@ -27,7 +27,7 @@ import javax.inject.Inject
  * @property vm T
  * @property consume Boolean
  */
-abstract class Xfragment<T : XviewModel> : Fragment() {
+abstract class Xfragment<T : XviewModel> : XbaseFragment() {
 
 
     @Inject

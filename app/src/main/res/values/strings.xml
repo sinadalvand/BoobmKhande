@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">بمب خنده</string>
+    <string name="home">خانه</string>
+    <string name="favor">علاقه مندی ها</string>
+    <string name="settings">تنظیمات</string>
+    <string name="exit">خروج</string>
+    <string name="version">ورژن %s</string>
+    <string name="about">درباره ما</string>
+    <string name="dark_mode">حالت تیره</string>
+    <string name="dark_mode_des">بین تم تیره و روشن جابجا شوید.   از این ویژگی می توان در زمان شب و روز استفاده کرد که تا جای ممکن از بروز آسیب های بینایی جلوگیری کند.</string>
+    <string name="secondery_color">رنگ ثانویه</string>
+    <string name="secondery_color_des">رنگ ثانویه برنامه را انتخاب کنید و شاهد این تغییر رنگ در تولبار بقیه بخش های ظاهری خواهی بود.</string>
+    <string name="image_share">ارسال لینک عکس</string>
+    <string name="image_share_des">هنگام اشتراک گذاری متن ، تعیین کنید که لینک عکس پست های دارای تصویر در محتوای اشتراک گذاری شده وجود داشته باشد یا خیر!</string>
+    <string name="rerun">برنامه را ببندید و مجددا باز کنید.</string>
+    <string name="favor_empty">لیست علاقه مندی ها خالی است!</string>
+    <string name="share_link">اشتراک گذاری متن</string>
 </resources>

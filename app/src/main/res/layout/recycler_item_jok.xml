@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="7dp"
+        android:maxWidth="350dp"
+        app:cardBackgroundColor="?attr/bk_toolbarSecond"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/recycler_item_content_Image"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/test" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/recycler_item_content_Image_cover"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                app:srcCompat="?attr/bk_shadow_image" />
+
+
+            <TextView
+                android:id="@+id/recycler_item_content_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp"
+                android:text="لورم ایپسوم متن تست است در صنعت طراحی استفاده می شود. \n برای تست موارد بیشتر نسخه اصلی را نصب کنید و پس از اجرای آن مجددا وارد بخش تنظیمات شده و امکانات موجود را تست کنید. \n متن ادامه تنها جهت تست بلندی محتوا می باشد و فاقد ارزش محتوایی است."
+                android:textColor="?attr/bk_textColor" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                app:tint="?attr/bk_star_color"
+                android:id="@+id/recycler_item_content_star"
+                android:alpha="0.2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/ic_favor_fill" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/Text_jok"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textColor="?attr/bk_textColor"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/Text_jok_number"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textColor="?attr/bk_textColor" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/mainFragment">
@@ -7,6 +8,28 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="vortex.jokbazaar.view.fragment.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favorFragment"
+            app:destination="@id/favorFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorFragment"
+        android:name="vortex.jokbazaar.view.fragment.FavorFragment"
+        android:label="FavorFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="vortex.jokbazaar.view.fragment.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="vortex.jokbazaar.view.fragment.SettingsFragment"
+        android:label="SettingsFragment" />
 
 </navigation>

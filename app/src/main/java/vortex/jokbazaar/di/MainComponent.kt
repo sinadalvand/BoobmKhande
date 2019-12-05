@@ -1,6 +1,7 @@
 package vortex.jokbazaar.di
 
 import android.content.Context
+import co.rosemovie.app.Di.Module.NetworkModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -14,14 +15,17 @@ import vortex.jokbazaar.di.modules.ApplicationModule
 import javax.inject.Singleton
 
 
-@Component(modules = [
-    AndroidInjectionModule::class,
-    AndroidSupportInjectionModule::class,
-    ActivityModule::class,
-    FragmentModule::class,
-    ViewModelModule::class,
-    ApplicationModule::class
-])
+@Component(
+    modules = [
+        AndroidInjectionModule::class,
+        AndroidSupportInjectionModule::class,
+        ActivityModule::class,
+        FragmentModule::class,
+        ViewModelModule::class,
+        ApplicationModule::class,
+        NetworkModule::class
+    ]
+)
 @Singleton
 interface MainComponent : AndroidInjector<BoombApplication> {
 

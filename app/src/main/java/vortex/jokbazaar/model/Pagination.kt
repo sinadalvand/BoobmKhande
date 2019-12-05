@@ -4,15 +4,15 @@ import com.google.gson.annotations.SerializedName
 
 class Pagination <T> {
 
-    @SerializedName("totalPage")
+    @SerializedName("pages")
     var totalPage = -1
 
 
-    @SerializedName("currentPage")
+    @SerializedName("page")
     var currentPage = -1
 
 
-    @SerializedName("Data")
-    val data = arrayListOf<T>()
+    @SerializedName("docs")
+    var data = arrayListOf<T>()
 
 }
