@@ -3,9 +3,7 @@
    
    
 ## screenshot
-<img src="https://github.com/sinadalvand/BoobmKhande/blob/master/art/main.jpg" width="250"/>
-<img src="https://github.com/sinadalvand/BoobmKhande/blob/master/art/menu.jpg" width="250"/>
-<img src="https://github.com/sinadalvand/BoobmKhande/blob/master/art/settings.jpg" width="250"/>
+<img src="https://github.com/sinadalvand/BoobmKhande/blob/master/art/main.jpg" width="250"/><img src="https://github.com/sinadalvand/BoobmKhande/blob/master/art/menu.jpg" width="250"/><img src="https://github.com/sinadalvand/BoobmKhande/blob/master/art/settings.jpg" width="250"/>
 
 
 
