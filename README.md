@@ -1,5 +1,11 @@
 # BoobmKhande
-   BoombKhande Source Code ...
+   BoombKhande Source Code ...(Kotlin)
+   
+   
+### details:
+  * MVVM Arch
+  * Dagger 2 (DI)
+  * Navigation Component
    
    
 ## screenshot
