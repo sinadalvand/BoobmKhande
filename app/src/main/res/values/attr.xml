@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="bk_background" format="color" />
+    <attr name="bk_secondBackground" format="color"/>
+    <attr name="bk_toolbarSecond" format="color" />
+    <attr name="bk_textColor" format="color" />
+    <attr name="bk_deactiveTextColor" format="color" />
+    <attr name="bk_shadow_image" format="reference"/>
+    <attr name="bk_shadow_menu" format="reference"/>
+    <attr name="bk_text_hint" format="reference"/>
+    <attr name="bk_text_hint_second" format="reference"/>
+    <attr name="bk_star_color" format="color"/>
+
+</resources>
