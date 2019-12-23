@@ -35,7 +35,7 @@ class MainFragment : Xfragment<MainFragmentViewModel>() {
     lateinit var databse: HandsomeDatabse
 
 
-    lateinit var vms:MainActivityViewModel
+    lateinit var vms: MainActivityViewModel
 
 
     override fun onCreateView(
@@ -51,15 +51,29 @@ class MainFragment : Xfragment<MainFragmentViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recycler_fragment_main.layoutManager = LinearLayoutManager(context!!, LinearLayoutManager.VERTICAL, false)
+        recycler_fragment_main.layoutManager =
+            LinearLayoutManager(context!!, LinearLayoutManager.VERTICAL, false)
         recycler_fragment_main.adapter = mainAdapter
 
         vms.getJoks(1, "")
 
         recycler_fragment_main.addOnScrollListener(object :
-            EndlessRecyclerListener<LinearLayoutManager>(recycler_fragment_main.layoutManager as LinearLayoutManager, Const.Jok_PAGE) {
+            EndlessRecyclerListener<LinearLayoutManager>(
+                recycler_fragment_main.layoutManager as LinearLayoutManager,
+                Const.Jok_PAGE
+            ) {
             override fun onLoadPage(page: Int) {
                 vms.getJoks(page, vms.joks.value?.last()?.id ?: "")
+                getAd()
+            }
+        })
+
+        recycler_fragment_main.addOnScrollListener(object :
+            EndlessRecyclerListener<LinearLayoutManager>(
+                recycler_fragment_main.layoutManager as LinearLayoutManager,
+                20
+            ) {
+            override fun onLoadPage(page: Int) {
                 getAd()
             }
         })
@@ -75,18 +89,17 @@ class MainFragment : Xfragment<MainFragmentViewModel>() {
         })
 
 
+        vms.error.observe(viewLifecycleOwner, Observer {
+            if (it && !vms.retry.hasActiveObservers())
+                ErrorSheet.showInfo(childFragmentManager)
+        })
+
+
         val callback = HandsomeDragListener(mainAdapter)
         val mItemTouchHelper = ItemTouchHelper(callback)
         mItemTouchHelper.attachToRecyclerView(recycler_fragment_main)
 
-
-        vms.repo.getPost(1,"151").subscribeOn(Schedulers.io()).subscribe({
-            Timber.e("size: ${it.data.size}")
-        },{
-            it.printStackTrace()
-        })
-
-        getAd();
+        getAd()
 
 
     }
@@ -97,11 +110,10 @@ class MainFragment : Xfragment<MainFragmentViewModel>() {
                 override fun onResponse(adId: Array<String>) {
                     val ads = vms.ads.value ?: arrayListOf()
                     ads.addAll(adId)
-                    Timber.e("Error in Tapsell AD : $adId")
+                    vms.ads.postValue(ads)
                 }
 
                 override fun onFailed(message: String) {
-                    Timber.e("Error in Tapsell AD : $message")
                 }
             })
     }

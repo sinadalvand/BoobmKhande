@@ -5,8 +5,22 @@
     android:layoutDirection="ltr"
     android:layout_height="wrap_content">
 
+
+    <ir.tapsell.sdk.nativeads.views.RatioImageView
+        android:id="@id/tapsell_nativead_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:aspect_ratio="0.5625"
+        android:alpha="0.5"
+        app:aspect_style="fixed_width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <ImageView
-        android:alpha="0.2"
         android:src="@drawable/icon_place_holder"
         android:id="@id/tapsell_nativead_logo"
         android:layout_width="70dp"
@@ -18,17 +32,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:alpha="0.7"
-        android:textColor="?attr/bk_textColor"
-        android:textSize="17sp"
-        android:text="تبلیغات"
-        android:layout_marginBottom="5dp"
+        android:gravity="right"
         android:id="@id/tapsell_nativead_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="تبلیغات"
+        android:textColor="?attr/bk_textColor"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/tapsell_nativead_rating"
-        app:layout_constraintEnd_toStartOf="@id/tapsell_nativead_logo" />
+        app:layout_constraintEnd_toStartOf="@id/tapsell_nativead_logo"
+        app:layout_constraintStart_toEndOf="@+id/tapsell_nativead_cta" />
 
     <TextView
         android:layout_marginBottom="5dp"
@@ -40,7 +55,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:alpha="0.7"
         android:textColor="?attr/bk_textColor"
         android:gravity="center"
         android:text="خطا : Ad UnAvailable"
@@ -54,31 +68,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tapsell_nativead_logo" />
 
     <ir.tapsell.sdk.nativeads.views.RateStarView
-        android:alpha="0.2"
         android:id="@id/tapsell_nativead_rating"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/tapsell_nativead_logo"
         app:layout_constraintEnd_toEndOf="@id/tapsell_nativead_title" />
 
-    <ir.tapsell.sdk.nativeads.views.RatioImageView
-        android:id="@id/tapsell_nativead_banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:aspect_ratio="0.5625"
-        app:aspect_style="fixed_width"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+
 
     <Button
-        android:alpha="0.7"
         android:textColor="#333333"
         android:text="دانلود"
-        android:enabled="false"
         android:id="@id/tapsell_nativead_cta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

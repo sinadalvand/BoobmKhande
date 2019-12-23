@@ -26,25 +26,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/recycler_item_content_Image"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:scaleType="centerCrop"
-                tools:src="@drawable/test" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/recycler_item_content_Image_cover"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                app:srcCompat="?attr/bk_shadow_image" />
 
 
             <TextView
                 android:id="@+id/recycler_item_content_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="30dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="20dp"

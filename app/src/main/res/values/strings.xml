@@ -15,4 +15,6 @@
     <string name="rerun">برنامه را ببندید و مجددا باز کنید.</string>
     <string name="favor_empty">لیست علاقه مندی ها خالی است!</string>
     <string name="share_link">اشتراک گذاری متن</string>
+    <string name="error_occure">دریافت اطلاعات با خطا مواجه شده!</string>
+    <string name="retry">سعی مجدد</string>
 </resources>

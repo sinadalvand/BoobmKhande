@@ -35,7 +35,7 @@ class BoombApplication : DaggerApplication() {
         )
 
 
-        Tapsell.initialize(this,BuildConfig.TAPSELL_NATIVE_BANNER)
+        Tapsell.initialize(this,BuildConfig.TAPSELL_ID)
     }
 
 

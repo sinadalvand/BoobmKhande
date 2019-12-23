@@ -111,7 +111,6 @@ class MainRecyclerAdapter(
 
     class JokView(v: View) : RecyclerView.ViewHolder(v) {
         val text = v.recycler_item_content_text
-        val image = v.recycler_item_content_Image
         val star = v.recycler_item_content_star
     }
 
@@ -119,19 +118,6 @@ class MainRecyclerAdapter(
 
         holder.text.text = HtmlCompat.fromHtml(Jok.content, HtmlCompat.FROM_HTML_MODE_LEGACY)
         holder.star.alpha = if (Jok.favorit) 1f else 0.2f
-
-
-        val params = holder.text.layoutParams as RelativeLayout.LayoutParams
-        if (Jok.img == "") {
-            params.topMargin = Utils.dpToPx(40)
-            holder.image.gone()
-        } else {
-            params.topMargin = Utils.dpToPx(125)
-            holder.image.visible()
-            Glide.with(holder.itemView.context).load(R.drawable.test)
-                .apply(RequestOptions().skipMemoryCache(true)).into(holder.image)
-        }
-        holder.text.layoutParams = params
 
 
     }
@@ -165,15 +151,20 @@ class MainRecyclerAdapter(
     }
 
     private fun AdViewHandle(holder: AdView, position: Int) {
-        val pos = position / if (ads.isEmpty()) 1 else ads.size
+
 
         if (ads.isEmpty())
 //            holder.hideAd(true)
         else {
 //            holder.hideAd(false)
-            holder.bindView(pos)
+            holder.bindView(adGetter(position))
         }
 
+    }
+
+    private fun adGetter(position: Int): Int {
+        val item = position / AD_POSITION
+        return if (ads.size - 1 >= item) item else ads.size - 1
     }
 
 
@@ -199,7 +190,9 @@ class MainRecyclerAdapter(
         return position - ad - posi - if (showGuide) 1 else 0
     }
 
-    private fun getItemsCount(): Int = joks.size + ads.size + if (showGuide) 1 else 0
+    private fun getItemsCount(): Int =
+        if (joks.isNotEmpty()) joks.size + ads.size + if (showGuide) 1 else 0 else 0
+
     private fun getViewHolder(type: Int, container: ViewGroup): RecyclerView.ViewHolder {
         return when (type) {
             GUIDE -> DescriptionView(
@@ -267,7 +260,7 @@ class MainRecyclerAdapter(
                 jok.favorit = !jok.favorit
                 Toast.makeText(context, "عملیات با خطا مواجه شد", Toast.LENGTH_LONG).show()
             })
-        listener?.dragged(jok.id,!jok.favorit)
+        listener?.dragged(jok.id, !jok.favorit)
 
     }
 

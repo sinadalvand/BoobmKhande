@@ -1,2 +1,2 @@
-include ':app',':tinyToolbar'
+include ':app',':tinyToolbar',':awesomeLoadButton'
 rootProject.name='BoombKhandeh'

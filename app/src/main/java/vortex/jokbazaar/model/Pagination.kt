@@ -15,4 +15,7 @@ class Pagination <T> {
     @SerializedName("docs")
     var data = arrayListOf<T>()
 
+    // 0==> online     1==> offline
+    var dataLoadMode = 0
+
 }

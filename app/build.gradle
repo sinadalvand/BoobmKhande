@@ -10,7 +10,7 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 
 apply plugin: 'com.google.gms.google-services'
 
-//apply plugin: 'io.fabric'
+apply plugin: 'io.fabric'
 
 
 android {
@@ -20,13 +20,15 @@ android {
         applicationId "vortex.jokbazaar"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0.0"
+        versionCode 20
+        versionName "7.0.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         buildConfigField "String", "appName", '"BoombKhande"'
         buildConfigField "String", "TAPSELL_NATIVE_BANNER", '"5de77a1c14f8b500011c52b3"'
+        buildConfigField "String", "TAPSELL_ID", '"qnsrljldlrbftohgkqtlcnberiglnrtjilopteadamknhnrfjoambmidnsapjsecpkfoga"'
         buildConfigField "Integer", "databseVersion", '1'
+        setProperty("archivesBaseName", "30nama-V$versionName-C$versionCode")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -73,7 +75,7 @@ dependencies {
     // Google Console
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation 'com.google.android.gms:play-services-safetynet:16.0.0'
-//    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 //    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
 
@@ -131,6 +133,7 @@ dependencies {
 
 
     implementation project(":tinyToolbar")
+    implementation project(":awesomeLoadButton")
 
     //Pagination
 //    implementation "androidx.paging:paging-rxjava2:2.1.0"

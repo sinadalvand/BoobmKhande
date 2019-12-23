@@ -2,6 +2,7 @@ package vortex.jokbazaar.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.schedulers.Schedulers
+import vortex.jokbazaar.core.xpack.XliveData
 import vortex.jokbazaar.core.xpack.XviewModel
 import vortex.jokbazaar.model.Post
 import vortex.jokbazaar.protocol.Repository
@@ -16,26 +17,29 @@ class MainActivityViewModel @Inject constructor() : XviewModel() {
 
     var joks = MutableLiveData<ArrayList<Post>>()
     var ads = MutableLiveData<ArrayList<String>>()
+    var error = MutableLiveData<Boolean>()
+    var retry = XliveData<Boolean>(true)
 
+
+    var page = 0
 
     fun getJoks(page: Int, lastId: String) {
+        this.page = page
         disposables.add(repo.getPost(page, lastId).observeOn(Schedulers.io()).subscribe({
-            if (it.data.size > 0)
+            if (it.data.size > 0) {
                 addToLiveArray(it.data.toTypedArray(), joks)
-        }, {
-            it.printStackTrace()
-        }))
-    }
+            }
 
-
-    fun addToFavor(jok: Post) {
-        disposables.add(repo.addToFavorit(jok).observeOn(Schedulers.io()).subscribe({
+            if (it.dataLoadMode ==1)
+                error.postValue(true)
+            else
+                error.postValue(false)
 
         }, {
             it.printStackTrace()
+            error.postValue(true)
         }))
     }
-
 
     private fun <T> addToLiveArray(array: Array<T>, liveArray: MutableLiveData<ArrayList<T>>) {
         val oldArray = liveArray.value ?: arrayListOf()
@@ -43,14 +47,8 @@ class MainActivityViewModel @Inject constructor() : XviewModel() {
         liveArray.postValue(oldArray)
     }
 
-    private fun <T> addToLiveArray(array: T, liveArray: MutableLiveData<ArrayList<T>>) {
-        val oldArray = liveArray.value ?: arrayListOf()
-        oldArray.add(array)
-        liveArray.postValue(oldArray)
-    }
 
-
-    fun deleteFavor(id: String,delete:Boolean) {
+    fun deleteFavor(id: String, delete: Boolean) {
         if (joks.value == null || joks.value?.size == 0) return
         val array = joks.value!!
         for (post in array) {

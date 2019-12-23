@@ -2,6 +2,7 @@ package vortex.jokbazaar.di.modules
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
+import vortex.jokbazaar.view.fragment.ErrorSheet
 import vortex.jokbazaar.view.fragment.FavorFragment
 import vortex.jokbazaar.view.fragment.MainFragment
 import vortex.jokbazaar.view.fragment.SettingsFragment
@@ -17,5 +18,8 @@ abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract fun getSettingsFragment(): SettingsFragment
+
+    @ContributesAndroidInjector
+    abstract fun getErrorFragment(): ErrorSheet
 
 }
